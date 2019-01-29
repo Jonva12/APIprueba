@@ -93,6 +93,10 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+            @if(isset($foto))
+                <h1>{{$foto}}</h1>
+                <img src='{{$foto}}'>
+                @endif
             </div>
         </div>
     </body>

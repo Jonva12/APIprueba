@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +24,9 @@ $client = new Client([
 	$posts=json_decode($response->getBody()->getContents());
     return view('index',compact('posts'));
 });
+
+Route::get('/imgur', function(){
+	return view('imgur');
+});
+
+Route::post('/imgurSubir', 'imgurController@index')->name('subirFoto');
